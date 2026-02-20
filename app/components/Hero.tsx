@@ -51,7 +51,7 @@ export default function Hero() {
                                 }`}
                             style={{ backgroundImage: `url(${slide.image})` }}
                         />
-                        <div className="absolute inset-0 bg-black/40" />
+                        <div className="absolute inset-0 bg-black/20" />
                     </div>
                 ))}
             </div>
@@ -62,29 +62,35 @@ export default function Hero() {
                 <div className="w-full h-full max-w-[1600px] border-x border-white/5 relative"> {/* Optional outer border */}
 
                     {/* Top Horizontal Line */}
-                    <div className="absolute top-[140px] left-0 w-full h-[1px] bg-white/20" />
+                    <div className="absolute top-[140px] left-0 w-full h-[1px] bg-white/60" />
 
                     {/* Bottom Horizontal Line */}
-                    <div className="absolute bottom-[100px] left-0 w-full h-[1px] bg-white/20" />
+                    <div className="absolute bottom-[100px] left-0 w-full h-[1px] bg-white/60" />
 
                     {/* 6 Vertical Lines - Uneven Order */}
                     {/* Line 1: Left Edge (0%) */}
-                    <div className="absolute top-0 bottom-0 left-0 w-[1px] bg-white/20" />
+                    <div className="absolute top-0 bottom-0 left-0 w-[1px] bg-white/60" />
 
                     {/* Line 2: Near Left (12%) */}
-                    <div className="absolute top-0 bottom-0 left-[12%] w-[1px] bg-white/10" />
+                    <div className="absolute top-[140px] bottom-[100px] left-[1%] w-[1px] bg-white/60" />
 
                     {/* Line 3: Inner Left (28%) */}
-                    <div className="absolute top-0 bottom-0 left-[28%] w-[1px] bg-white/10" />
+                    <div className="absolute top-[140px] bottom-[100px] left-[5%] w-[1px] bg-white/60" />
+
+                    {/* Line 3: Inner Left (28%) */}
+                    <div className="absolute top-[140px] bottom-[100px] left-[10%] w-[1px] bg-white/60" />
+
+                    {/* Line 3: Inner Right (28%) */}
+                    <div className="absolute top-[140px] bottom-[100px] right-[10%] w-[1px] bg-white/60" />
 
                     {/* Line 4: Inner Right (72%) */}
-                    <div className="absolute top-0 bottom-0 right-[28%] w-[1px] bg-white/10" />
+                    <div className="absolute top-[140px] bottom-[100px] right-[5%] w-[1px] bg-white/60" />
 
                     {/* Line 5: Near Right (12%) */}
-                    <div className="absolute top-0 bottom-0 right-[12%] w-[1px] bg-white/10" />
+                    <div className="absolute top-[140px] bottom-[100px] right-[1%] w-[1px] bg-white/60" />
 
                     {/* Line 6: Right Edge (0%) */}
-                    <div className="absolute top-0 bottom-0 right-0 w-[1px] bg-white/20" />
+                    <div className="absolute top-0 bottom-0 right-0 w-[1px] bg-white/60" />
                 </div>
             </div>
 
@@ -97,10 +103,10 @@ export default function Hero() {
                     <div className="h-[140px] w-full" />
 
                     {/* Center Content Area */}
-                    <div className="absolute top-[140px] bottom-[100px] left-0 right-0 flex flex-col items-center justify-center">
-                        <h1 className="text-center text-[clamp(2.5rem,5.5vw,5rem)] leading-[0.9] font-light tracking-wide uppercase max-w-5xl opacity-0 animate-[fadeIn_1s_ease-out_0.5s_forwards] mix-blend-overlay text-white/90">
+                    <div className="absolute top-[30dvh] left-0 right-0 flex flex-col items-center justify-center">
+                        <h1 className="text-center font-cormorant-upright text-[clamp(1.5rem,3.5vw,3rem)] leading-[0.9] font-light tracking-wide uppercase max-w-5xl opacity-0 animate-[fadeIn_1s_ease-out_0.5s_forwards] mix-blend-overlay text-white/90">
                             Function Led Designs With <br />
-                            <span className="font-normal block mt-4">Cost Effective Execution Plans.</span>
+                            <span className="font-normal font-cormorant-upright block mt-4">Cost Effective Execution Plans.</span>
                         </h1>
                         <p className="mt-8 text-xs tracking-[0.3em] text-white/60 uppercase">S+UM Architects</p>
                     </div>
@@ -108,12 +114,12 @@ export default function Hero() {
                     {/* Bottom Info Bar */}
                     <div className="absolute bottom-0 left-0 w-full h-[100px] flex justify-between items-center px-6 md:px-[3%]">
                         {/* Text aligns with Line 2 approx if we use padding, or just standard positioning */}
-                        <div className="text-sm tracking-[0.2em] uppercase font-medium">
+                        <div className="text-md tracking-[0.2em] uppercase font-bold">
                             {slides[currentSlide].category}
                         </div>
 
-                        <div className="text-sm tracking-[0.2em] font-mono">
-                            0{currentSlide + 1} / 0{slides.length}
+                        <div className="text-md tracking-[0.2em] font-bold">
+                            {currentSlide + 1} / {slides.length}
                         </div>
                     </div>
                 </div>

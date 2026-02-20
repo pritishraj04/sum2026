@@ -20,7 +20,7 @@ export default function Navbar() {
         }`}
     >
       <div className="w-full max-w-[1600px] px-6 md:px-[3%] flex justify-between items-center">
-        <div className="relative w-16 h-16">
+        <div className="relative w-50 h-auto">
           <img
             src="/assets/ui/sum-logo.svg"
             alt="S+UM Logo"
